@@ -6,3 +6,4 @@ obj
 *.suo
 License.config
 *.mdf
+App_Data
