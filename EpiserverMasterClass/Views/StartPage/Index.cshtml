@@ -1,5 +1,4 @@
 @using Domain.Enum
-@using EpiserverMasterClass
 @model PageViewModel<EpiserverMasterClass.Models.Pages.StartPage>
 
-@Html.PropertyFor(x => x.CurrentPage.MainContentArea, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth })
+@Html.PropertyFor(x => x.CurrentPage.MainContentArea, new { CssClass = "row equal-height", tag = ContentAreaTags.FullWidth })
