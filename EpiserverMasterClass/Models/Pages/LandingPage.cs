@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Domain.Enum;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
@@ -10,7 +11,7 @@ namespace EpiserverMasterClass.Models.Pages
     /// </summary>
     [SiteContentType(
        GUID = "DBED4258-8213-48DB-A11F-99C034172A54",
-       GroupName = Global.GroupNames.Specialized)]
+       GroupName = GroupNames.Specialized)]
     [SiteImageUrl]
     public class LandingPage : SitePageData
     {

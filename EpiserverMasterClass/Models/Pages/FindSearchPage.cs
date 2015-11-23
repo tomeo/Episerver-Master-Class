@@ -1,7 +1,6 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using EpiserverMasterClass.Models;
-using EpiserverMasterClass.Models.Pages;
+using Domain.Enum;
 using EPiServer.DataAnnotations;
 using EPiServer.DataAbstraction;
 using EPiServer.Core;
@@ -14,7 +13,7 @@ namespace EpiserverMasterClass.Models.Pages
     /// </summary>
     [SiteContentType(
         GUID = "AAC25733-1D21-4F82-B031-11E626C91E30",
-        GroupName = EpiserverMasterClass.Global.GroupNames.Specialized,
+        GroupName = GroupNames.Specialized,
         DisplayName = "SearchPage")]
     [SiteImageUrl]
     public class FindSearchPage : SitePageData, IHasRelatedContent, ISearchPage

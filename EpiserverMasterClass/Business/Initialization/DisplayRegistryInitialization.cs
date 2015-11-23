@@ -4,6 +4,7 @@ using EPiServer.ServiceLocation;
 using EPiServer.Web;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using Domain.Enum;
 
 namespace EpiserverMasterClass.Business.Initialization
 {
@@ -18,9 +19,9 @@ namespace EpiserverMasterClass.Business.Initialization
                 // Register Display Options
                 var options = ServiceLocator.Current.GetInstance<DisplayOptions>();
                 options
-                    .Add("full", "/displayoptions/full", Global.ContentAreaTags.FullWidth, "", "epi-icon__layout--full")
-                    .Add("wide", "/displayoptions/wide", Global.ContentAreaTags.TwoThirdsWidth, "", "epi-icon__layout--two-thirds")
-                    .Add("narrow", "/displayoptions/narrow", Global.ContentAreaTags.OneThirdWidth, "", "epi-icon__layout--one-third");
+                    .Add("full", "/displayoptions/full", ContentAreaTags.FullWidth, "", "epi-icon__layout--full")
+                    .Add("wide", "/displayoptions/wide", ContentAreaTags.TwoThirdsWidth, "", "epi-icon__layout--two-thirds")
+                    .Add("narrow", "/displayoptions/narrow", ContentAreaTags.OneThirdWidth, "", "epi-icon__layout--one-third");
 
                 AreaRegistration.RegisterAllAreas();
 

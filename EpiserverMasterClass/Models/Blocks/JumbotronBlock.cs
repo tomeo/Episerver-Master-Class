@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Domain.Enum;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.Web;
@@ -11,7 +12,7 @@ namespace EpiserverMasterClass.Models.Blocks
     /// Used for a primary message on a page, commonly used on start pages and landing pages
     /// </summary>
     [SiteContentType(
-        GroupName = Global.GroupNames.Specialized,
+        GroupName = GroupNames.Specialized,
         GUID = "9FD1C860-7183-4122-8CD4-FF4C55E096F9")]
     [SiteImageUrl]
     public class JumbotronBlock : SiteBlockData

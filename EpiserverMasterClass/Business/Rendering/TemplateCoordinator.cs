@@ -1,3 +1,4 @@
+using Domain.Enum;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.ServiceLocation;
@@ -39,7 +40,7 @@ namespace EpiserverMasterClass.Business.Rendering
         {
             viewTemplateModelRegistrator.Add(typeof(JumbotronBlock), new TemplateModel
             {
-                Tags = new[] { Global.ContentAreaTags.FullWidth },
+                Tags = new[] { ContentAreaTags.FullWidth },
                 AvailableWithoutTag = false,
                 Path = BlockPath("JumbotronBlockWide.cshtml")
             });
@@ -47,7 +48,7 @@ namespace EpiserverMasterClass.Business.Rendering
             viewTemplateModelRegistrator.Add(typeof(TeaserBlock), new TemplateModel
             {
                 Name = "TeaserBlockWide",
-                Tags = new[] { Global.ContentAreaTags.TwoThirdsWidth, Global.ContentAreaTags.FullWidth },
+                Tags = new[] { ContentAreaTags.TwoThirdsWidth, ContentAreaTags.FullWidth },
                 AvailableWithoutTag = false,
                 Path = BlockPath("TeaserBlockWide.cshtml")
             });
@@ -64,7 +65,7 @@ namespace EpiserverMasterClass.Business.Rendering
             {
                 Name = "PagePartialWide",
                 Inherit = true,
-                Tags = new[] { Global.ContentAreaTags.TwoThirdsWidth, Global.ContentAreaTags.FullWidth },
+                Tags = new[] { ContentAreaTags.TwoThirdsWidth, ContentAreaTags.FullWidth },
                 AvailableWithoutTag = false,
                 Path = PagePartialPath("PageWide.cshtml")
             });
@@ -72,7 +73,7 @@ namespace EpiserverMasterClass.Business.Rendering
             viewTemplateModelRegistrator.Add(typeof(ContactPage), new TemplateModel
             {
                 Name = "ContactPagePartialWide",
-                Tags = new[] { Global.ContentAreaTags.TwoThirdsWidth, Global.ContentAreaTags.FullWidth },
+                Tags = new[] { ContentAreaTags.TwoThirdsWidth, ContentAreaTags.FullWidth },
                 AvailableWithoutTag = false,
                 Path = PagePartialPath("ContactPageWide.cshtml")
             });
@@ -81,7 +82,7 @@ namespace EpiserverMasterClass.Business.Rendering
             {
                 Name = "NoRendererMessage",
                 Inherit = true,
-                Tags = new[] { Global.ContentAreaTags.NoRenderer },
+                Tags = new[] { ContentAreaTags.NoRenderer },
                 AvailableWithoutTag = false,
                 Path = BlockPath("NoRenderer.cshtml")
             });
@@ -89,12 +90,12 @@ namespace EpiserverMasterClass.Business.Rendering
 
         private static string BlockPath(string fileName)
         {
-            return string.Format("{0}{1}", BlockFolder, fileName);
+            return $"{BlockFolder}{fileName}";
         }
 
         private static string PagePartialPath(string fileName)
         {
-            return string.Format("{0}{1}", PagePartialsFolder, fileName);
+            return $"{PagePartialsFolder}{fileName}";
         }
     }
 }

@@ -1,3 +1,4 @@
+using Domain.Enum;
 using EPiServer.DataAnnotations;
 
 namespace EpiserverMasterClass.Models
@@ -9,7 +10,7 @@ namespace EpiserverMasterClass.Models
     {
         public SiteContentType()
         {
-            GroupName = Global.GroupNames.Default;
+            GroupName = GroupNames.Default;
         }
     }
 }

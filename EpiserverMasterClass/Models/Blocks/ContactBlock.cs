@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Domain.Enum;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
@@ -34,7 +35,7 @@ namespace EpiserverMasterClass.Models.Blocks
         [Display(
             GroupName = SystemTabNames.Content,
             Order = 3)]
-        [UIHint(Global.SiteUIHints.Contact)]
+        [UIHint(SiteUiHints.Contact)]
         public virtual PageReference ContactPageLink { get; set; }
 
         [Display(

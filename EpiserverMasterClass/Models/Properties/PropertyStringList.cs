@@ -1,4 +1,5 @@
 using System;
+using Domain.Enum;
 using EPiServer.Core;
 using EPiServer.Framework.DataAnnotations;
 using EPiServer.PlugIn;
@@ -9,19 +10,15 @@ namespace EpiserverMasterClass.Models.Properties
     /// Property type for storing a list of strings
     /// </summary>
     /// <remarks>For an example, see <see cref="EpiserverMasterClass.Models.Pages.SitePageData"/> where this property type is used for the MetaKeywords property</remarks>
-    [EditorHint(Global.SiteUIHints.Strings)]
-    [PropertyDefinitionTypePlugIn(Description = "A property for list of strings", DisplayName = "String List")]
+    [EditorHint(SiteUiHints.Strings)]
+    [PropertyDefinitionTypePlugIn(
+        Description = "A property for list of strings",
+        DisplayName = "String List")]
     public class PropertyStringList : PropertyLongString
     {
-        protected String Separator = "\n";
+        protected string Separator = "\n";
 
-        public String[] List
-        {
-            get
-            {
-                return (String[])Value;
-            }
-        }
+        public string[] List => (string[])Value;
 
         public override Type PropertyValueType
         {

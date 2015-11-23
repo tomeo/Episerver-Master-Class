@@ -1,5 +1,6 @@
 using System;
 using System.Web.Mvc;
+using Domain.Enum;
 using EPiServer.Core;
 using EPiServer.Core.Html.StringParsing;
 using EPiServer.Web;
@@ -23,7 +24,7 @@ namespace EpiserverMasterClass.Business.Rendering
         /// <summary>
         /// Gets a CSS class used for styling based on a tag name (ie a Bootstrap class name)
         /// </summary>
-        /// <param name="tagName">Any tag name available, see <see cref="Global.ContentAreaTags"/></param>
+        /// <param name="tagName">Any tag name available, see <see cref="Domain.Enum.Global.ContentAreaTags"/></param>
         private static string GetCssClassForTag(string tagName)
         {
             if (string.IsNullOrEmpty(tagName))

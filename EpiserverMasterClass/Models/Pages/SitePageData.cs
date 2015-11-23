@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Domain.Enum;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
@@ -14,7 +15,7 @@ namespace EpiserverMasterClass.Models.Pages
     public abstract class SitePageData : PageData, ICustomCssInContentArea
     {
         [Display(
-            GroupName = Global.GroupNames.MetaData,
+            GroupName = GroupNames.MetaData,
             Order = 100)]
         [CultureSpecific]
         public virtual string MetaTitle
@@ -32,21 +33,21 @@ namespace EpiserverMasterClass.Models.Pages
         }
 
         [Display(
-            GroupName = Global.GroupNames.MetaData,
+            GroupName = GroupNames.MetaData,
             Order = 200)]
         [CultureSpecific]
         [BackingType(typeof(PropertyStringList))]
         public virtual string[] MetaKeywords { get; set; }
 
         [Display(
-            GroupName = Global.GroupNames.MetaData,
+            GroupName = GroupNames.MetaData,
             Order = 300)]
         [CultureSpecific]
         [UIHint(UIHint.LongString)]
         public virtual string MetaDescription { get; set; }
 
         [Display(
-            GroupName = Global.GroupNames.MetaData,
+            GroupName = GroupNames.MetaData,
             Order = 400)]
         [CultureSpecific]
         public virtual bool DisableIndexing { get; set; }

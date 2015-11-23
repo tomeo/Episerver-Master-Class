@@ -1,3 +1,4 @@
+using Domain.Enum;
 using EpiserverMasterClass.Business.Rendering;
 
 namespace EpiserverMasterClass.Models.Pages
@@ -7,7 +8,7 @@ namespace EpiserverMasterClass.Models.Pages
     /// </summary>
     [SiteContentType(
         GUID = "D178950C-D20E-4A46-90BD-5338B2424745",
-        GroupName = Global.GroupNames.Specialized)]
+        GroupName = GroupNames.Specialized)]
     [SiteImageUrl]
     public class ContainerPage : SitePageData, IContainerPage
     {
